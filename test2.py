@@ -27,7 +27,7 @@ def evaluateinputstring(inputstring,longstring,fullset,revealedset):
     s2= difflib.SequenceMatcher(None, inputstring, matchedstring, autojunk=False)
     print("match Ratio:" +str(s2.ratio()))
     if s2.ratio() > .9:
-        print("Input string: "+inputstring)
+        print("Input string:   "+inputstring)
         print("Matched string: "+matchedstring)
         #revealedset = revealedset | set(range(blocks[0][1],blocks[-2][1]+blocks[-2][2]))
         return revealedset.union(set(range(blocks[0][1],blocks[-2][1]+blocks[-2][2])))
